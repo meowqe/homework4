@@ -4,16 +4,28 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int a = 1;
-        int b = 1;
-        for(int i = 1; i<n; ++i) {
-            int x = a + b;
-            a = b;
-            b = x;
-            System.out.println(x + " ");
+        int x = n%10;
+        String a = String.valueOf(n);
+        switch (x) {
+            case 1:
+                a = "TORT";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                a = "TORTA";
+                break;
+            case 0:
+            case 5:
+            case 6 & 7:
+                a = "TORTOV";
+                break;
+            case 8 & 9:
+                a = "TORTOV";
+
 
 
         }
-
+        System.out.println(a);
     }
 }
