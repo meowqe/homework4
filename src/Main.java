@@ -1,31 +1,23 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main
+{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int x = n%10;
-        String a = String.valueOf(n);
-        switch (x) {
-            case 1:
-                a = "TORT";
-                break;
-            case 2:
-            case 3:
-            case 4:
-                a = "TORTA";
-                break;
-            case 0:
-            case 5:
-            case 6 & 7:
-                a = "TORTOV";
-                break;
-            case 8 & 9:
-                a = "TORTOV";
-
-
-
+        int n=in.nextInt();
+        int nn,i;
+        m:for (i=1; i<=9; ++i)
+        {
+            nn=n;
+            while(nn>0)
+            {
+                if (nn%10==i)
+                {
+                    System.out.println(i);
+                    break m;
+                }
+                nn=nn/10;
+            }
         }
-        System.out.println(a);
     }
 }
