@@ -1,24 +1,27 @@
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int [] array= {7, 8, 9, 10, 11};
-        for (int i = 0; i < array.length / 2; i++) {
-            array[i] = array[array.length - i - 1];
-            System.out.println(Arrays.toString(array));
+        int array[] = {8,1,0,5,-3,6,0,9};
+        int b = array[0];
+
+        for(int i = 1; i < array.length; ++i) {
+            if(b > 0){
+                if(array[i] < b && array[i] > 0)
+                    b = array[i];
+            }else
+                b = array[i];
+
+            System.out.println(b);
         }
 
-
-        }
 
 
 
 
     }
 
+}
 
 
 
